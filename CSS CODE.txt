@@ -1,0 +1,88 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f5e4d4;
+  font-family: Arial, sans-serif;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #a0522d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.steam {
+  position: absolute;
+  top: 20px;
+  width: 10px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  animation: steam-rise 2s infinite;
+}
+
+@keyframes steam-rise {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.cup {
+  position: relative;
+  width: 100px;
+  height: 60px;
+  background: #2c2c2c;
+  border-radius: 0 0 50px 50px;
+}
+
+.coffee-beans {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.bean {
+  width: 20px;
+  height: 30px;
+  background: #3e2723;
+  border-radius: 50%;
+  position: relative;
+}
+
+.bean::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 2px;
+  height: 20px;
+  background: #f5e4d4;
+  border-radius: 1px;
+}
+
+.logo-text {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c2c2c;
+  letter-spacing: 2px;
+}
